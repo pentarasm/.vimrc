@@ -11,6 +11,7 @@ hi clear group
 set noswapfile
 "plugins
 call plug#begin()
+Plug 'junegunn/goyo.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'preservim/NERDTree'
 Plug 'vim-airline/vim-airline'
@@ -23,9 +24,12 @@ set noruler
 set laststatus=1
 set cmdheight=1
 set shortmess+=F 
-colorscheme harlequin
+colorscheme obsidian 
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
+set ic
+map <F9> :Goyo <bar> <CR>
 
-
+"copy to clipboard
+vmap <C-y> "+y
